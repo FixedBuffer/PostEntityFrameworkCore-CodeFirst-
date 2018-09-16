@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace PostCore.Data
 {
@@ -13,7 +11,7 @@ namespace PostCore.Data
             Alumnos = new HashSet<Alumnos>();
         }
 
-        [Key] //Requiere de añadir using System.ComponentModel.DataAnnotations;
+        [Key]
         public int IdCurso { get; set; } //Clave primaria
         public string Nombre { get; set; }
         public string Ciudad { get; set; }
