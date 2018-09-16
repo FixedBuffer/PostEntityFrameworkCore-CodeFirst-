@@ -5,6 +5,11 @@ namespace PostCore.Data
     //Heredamos de DbContext nuestro contexto
     class PostDbContext : DbContext
     {
+        //Constructor sin parametros
+        public PostDbContext()       
+        {
+        }
+
         //Constructor con parametros para la configuracion
         public PostDbContext(DbContextOptions<PostDbContext> options)
         : base(options)
