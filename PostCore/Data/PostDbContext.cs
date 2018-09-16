@@ -2,16 +2,27 @@
 
 namespace PostCore.Data
 {
+    //Heredamos de DbContext nuestro contexto
     class PostDbContext : DbContext
     {
+        //Constructor con parametros para la configuracion
+        public PostDbContext(DbContextOptions<PostDbContext> options)
+        : base(options)
+        {
+        }
+
+        //Sobreescribimos el metodo OnConfiguring para hacer los ajustes que queramos en caso de
+        //llamar al constructor sin parametros
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured)
+            //En caso de que el contexto no este configurado, lo configuramos mediante la cadena de conexion
+            if (!optionsBuilder.IsConfigured) 
             {
                 optionsBuilder.UseMySql("Server=localhost;Database=postefcore;Uid=root;Pwd=root;");
             }
         }
 
+        //Tablas de datos
         public virtual DbSet<Alumnos> Alumnos { get; set; }
         public virtual DbSet<Cursos> Cursos { get; set; }
         public virtual DbSet<Profesores> Profesores { get; set; }
