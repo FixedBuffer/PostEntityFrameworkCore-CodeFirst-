@@ -42,6 +42,7 @@ namespace PostCore
                     foreach (var alumno in curso.Alumnos)
                         Console.WriteLine($"El alumno {alumno.Nombre} recibe el curso de {curso.Nombre},impartido por {profesor.Nombre}");
             }
+            Console.Read();
         }
     }
 }
