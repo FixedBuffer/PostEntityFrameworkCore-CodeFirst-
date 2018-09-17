@@ -14,7 +14,7 @@ namespace PostCore.Data
         public int IdProfesor { get; set; } //Clave primaria
         public string Nombre { get; set; }
 
-        //Entity Framewrok Core
+        //Entity Framework Core
         public ICollection<Cursos> Cursos { get; set; } //Objeto de navegación virtual EFC
     }
 }
