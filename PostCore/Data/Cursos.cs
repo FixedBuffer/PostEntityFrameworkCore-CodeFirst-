@@ -17,7 +17,7 @@ namespace PostCore.Data
         public string Ciudad { get; set; }
         public int IdProfesor { get; set; } //Campo clave foranea
 
-        //Entity Framewrok Core
+        //Entity Framework Core
         public Profesores Profesor { get; set; } //Objeto de navegación virtual EFC
         public ICollection<Alumnos> Alumnos { get; set; } //Objeto de navegación virtual EFC
     }
