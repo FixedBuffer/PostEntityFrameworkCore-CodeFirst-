@@ -11,7 +11,7 @@ namespace PostCore.Data
         public DateTime Nacimiento { get; set; }
         public int IdCurso { get; set; } //Campo clave foranea
 
-        //Entity Framewrok Core
+        //Entity Framework Core
         public Cursos Curso { get; set; } //Objeto de navegación virtual EFC
     }
 }
